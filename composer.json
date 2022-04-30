@@ -1,0 +1,17 @@
+{
+    "name": "anafay/radius-server",
+    "description": "Implementation of RADIUS server: both authorization and accounting (RFC 2865, 21866, 2867)",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Anafay",
+            "email": "anafay@mailv1.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "react/event-loop": "^1.1",
+        "react/datagram": "^1.5"
+    }
+}
