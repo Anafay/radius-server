@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Radius;
+namespace Anafay\RadiusServer;
 
 use React\Datagram\Socket;
 use React\EventLoop\LoopInterface;

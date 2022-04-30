@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Radius;
+namespace Anafay\RadiusServer;
 
 /**
  * Интерфейс для RADIUS-сервера
