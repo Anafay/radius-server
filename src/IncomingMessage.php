@@ -74,6 +74,24 @@ class IncomingMessage extends Message {
     }
 
     /**
+     * CallingStationId
+     * #require $this->hasAttribute(Self::ATTR_CALLING_STATION_ID)
+     * @return string
+     */
+    public function callingStationId(): string {
+        return $this->_attrib[Self::ATTR_CALLING_STATION_ID];
+    }
+
+    /**
+     * CalledStationId
+     * #require $this->hasAttribute(Self::ATTR_CALLED_STATION_ID)
+     * @return string
+     */
+    public function calledStationId(): string {
+        return $this->_attrib[Self::ATTR_CALLED_STATION_ID];
+    }
+
+    /**
      * IP-адрес NAS
      * При отсутствии возвращает 'N/A'
      * @return string
