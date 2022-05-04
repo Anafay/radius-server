@@ -41,4 +41,4 @@ $loop->run();
 ```
 
 # Requirements
-The library requires PHP>=7.0 and ReactPHP>=1.1.
+The library requires PHP>=7.0 and ReactPHP(event-loop>=1.1, datagram>=1.5).
