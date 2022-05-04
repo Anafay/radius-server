@@ -1,8 +1,13 @@
 {
     "name": "anafay/radius-server",
-    "description": "Implementation of RADIUS server: both authorization and accounting (RFC 2865, 21866, 2867)",
+    "description": "Implementation of RADIUS server: both authorization and accounting (RFC 2865, 2866, 2867)",
     "type": "library",
     "license": "Apache-2.0",
+    "autoload": {
+        "psr-4": {
+            "Anafay\\RadiusServer": ["src/"]
+        }
+    },
     "authors": [
         {
             "name": "Anafay",

@@ -24,7 +24,7 @@ class OutgoingMessage extends Message {
      * @param int|string|array $value
      * #ensure $this->hasAttribute($type)
      */
-    public function addAttribute(int $type, $value) {
+    public function addAttribute(int $type, $value):OutgoingMessage {
         if (!$this->hasAttribute($type)) {
             $this->_attrib[$type] = $value;
         } else {
@@ -44,6 +44,7 @@ class OutgoingMessage extends Message {
                 $this->attrib[$type] = [$val, $value];
             }
         }
+        return $this;
     }
 
     /**

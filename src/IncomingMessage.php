@@ -324,6 +324,7 @@ class IncomingMessage extends Message {
                 case Self::ATTR_CHAP_CHALLENGE:
                 case Self::ATTR_LOGIN_LAT_PORT:
                 case Self::ATTR_TUNNEL_PRIVATE_GROUP_ID:
+                case Self::ATTR_TUNNEL_ASSIGNMENT_ID:
                     //  Строки
                     $this->_attrib[$type] = \unpack('a*', $data)[1];
                     break;

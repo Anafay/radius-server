@@ -1,4 +1,4 @@
-Implementation of RADIUS server: both authorization and accounting (RFC 2865, 21866, 2867).
+Implementation of RADIUS server: both authorization and accounting (RFC 2865, 2866, 2867).
 
 # Usage
 ## RADIUS server class:
@@ -6,14 +6,14 @@ Implementation of RADIUS server: both authorization and accounting (RFC 2865, 21
 class RadiusServer implements RadiusServerInterface {
     public function onAccessRequest(IncomingMessage $message) {
         if(check($message)){
-            $accept = $message->replyAccept();
-            $accept->addAttribute(Message::ATTR_FRAMED_IP_ADDRESS, '192.168.0.1');
-            $accept->addAttribute(Message::ATTR_SESSION_TIMEOUT,180);
-            $accept->send();
+            $message->replyAccept()
+                ->addAttribute(Message::ATTR_FRAMED_IP_ADDRESS, '192.168.0.1')
+                ->addAttribute(Message::ATTR_SESSION_TIMEOUT,180)
+                ->send();
         }else{
-            $reject = $message->replyReject();
-            $reject->addAttribute(Message::ATTR_REPLY_MESSAGE,'Restricted');
-            $reject->send();
+            $message->replyReject()
+                ->addAttribute(Message::ATTR_REPLY_MESSAGE,'Restricted')
+                ->send();
         }
     }
 
