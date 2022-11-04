@@ -14,7 +14,7 @@
             "email": "anafay@mailv1.ru"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "alpha",
     "require": {
         "react/event-loop": "^1.1",
         "react/datagram": "^1.5"

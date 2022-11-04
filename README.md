@@ -18,16 +18,16 @@ class RadiusServer implements RadiusServerInterface {
     }
 
     public function onAccountingStart(IncomingMessage $message, Session $session) {
-        log($session,'start');
+        $this->log($session,'start');
     }
 
     public function onAccountingStop(IncomingMessage $message, Session $session) {
-        log($session,'stop');
-        save($session);
+        $this->log($session,'stop');
+        $this->save($session);
     }
 
     public function onInterimUpdate(IncomingMessage $message, Session $session) {
-        log($session,'interim');
+        $this->log($session,'interim');
     }
     ....
 }
@@ -35,10 +35,10 @@ class RadiusServer implements RadiusServerInterface {
 ## ReactPHP application:
 ```php
 $loop = React\EventLoop\Factory::create();
-$radius = new Factory(new RadiusServer(),'10.1.0.1');
-$radius->listen();
+$radius = new Factory(new RadiusServer(),'secret');
+$radius->listen($loop,'10.1.0.1');
 $loop->run();
 ```
 
 # Requirements
-The library requires PHP>=7.0 and ReactPHP(event-loop>=1.1, datagram>=1.5).
+The library requires PHP>=7.0 and ReactPHP (event-loop>=1.1, datagram>=1.5).
