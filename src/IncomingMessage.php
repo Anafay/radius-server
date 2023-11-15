@@ -342,7 +342,7 @@ class IncomingMessage extends Message {
                 case Self::ATTR_CHAP_CHALLENGE:
                 case Self::ATTR_LOGIN_LAT_PORT:
                 case Self::ATTR_TUNNEL_PRIVATE_GROUP_ID:
-                case Self::ATTR_TUNNEL_ASSIGNMENT_ID:
+                case Self::ATTR_TUNNEL_ASSIGMENT_ID:
                     //  Строки
                     $this->_attrib[$type] = \unpack('a*', $data)[1];
                     break;
@@ -390,7 +390,7 @@ class IncomingMessage extends Message {
                     }
                     break;
                 default:
-                    echo $type . PHP_EOL;
+                //echo $type . PHP_EOL;
             }
             //  Пропускаем атрибут
             $i += $length;
