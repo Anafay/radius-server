@@ -152,7 +152,7 @@ class Message {
      * @return mixed
      */
     public function getAttribute(int $type) {
-        return $this->_attrub[$type];
+        return $this->_attrib[$type];
     }
 
 }
